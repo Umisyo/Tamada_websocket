@@ -33,11 +33,12 @@ class  MyWebSocket(val activity: Activity, uri: URI) : WebSocketClient(uri){
     override fun onMessage(message: String?) {
         Log.i(javaClass.simpleName, "received massage")
         Log.i(javaClass.simpleName, "loading in ${Thread.currentThread().name}")
-        activity.runOnUiThread{
+        activity.runOnUiThread {
             contentView.append("$message")
             contentView.append("$breakLine")
             Log.i(javaClass.simpleName, "write message in TextView")
             Log.i(javaClass.simpleName, "loading in ${Thread.currentThread().name}")
         }
+
     }
 }

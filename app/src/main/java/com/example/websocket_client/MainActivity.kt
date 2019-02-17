@@ -7,7 +7,7 @@ import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
-    private val uri = URI("ws://192.168.43.110:1234")
+    private val uri = URI("ws://192.168.43.110/:1234")
     private val client = MyWebSocket(this, uri)
 
     override fun onCreate(savedInstanceState: Bundle?) {
